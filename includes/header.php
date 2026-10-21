@@ -1,9 +1,9 @@
 <?php
-// রুট বেস URL (আপনার সার্ভারের রুট ফোল্ডারের নাম অনুযায়ী বদলান)
-$base = "/abc/";
+// Compute the application base path dynamically so the project works in any folder name.
+$scriptName = $_SERVER['SCRIPT_NAME'] ?? '/index.php';
+$base = rtrim(dirname($scriptName), '/');
+$base = ($base === '' || $base === '.') ? '/' : $base . '/';
 ?>
-
-
 
 <!-- Header -->
 <header class="fixed-top header">
@@ -64,6 +64,3 @@ $base = "/abc/";
         </div>
     </nav>
 </header>
-
-
-
