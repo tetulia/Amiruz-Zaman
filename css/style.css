@@ -1,0 +1,1629 @@
+body {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 110px; /* জাভাস্ক্রিপ্ট লোড হওয়ার পূর্বের ডিফল্ট প্যাডিং */
+}
+
+/* Smart Fixed Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: transform 0.35s ease-in-out;
+}
+
+/* Top Header */
+.top-header {
+    background-color: #b4b3b3;
+    padding: 6px 0;
+    margin: 0;
+}
+
+.top-header a {
+  color: #09750e; /* লিংকের রঙ */
+  text-decoration: none; /* চাইলে আন্ডারলাইন সরিয়ে দিন */
+  font-weight: bold; /* চাইলে বোল্ড করতে পারেন */
+}
+
+.top-header a:hover {
+  color: #ff0000; /* hover করলে লাল */
+}
+
+/* Navbar */
+nav.navbar {
+  background-color: #506375; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+/* মোবাইলের জন্য মেনু স্ক্রলিং */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    max-height: 75vh; /* স্ক্রলিং মেনু */
+    overflow-y: auto;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffcc00; /* আপনার পছন্দের কালার */
+  font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white; /* hover এ অন্য রঙ */
+}
+/* সাব মেনু ব্যাকগ্রাউন্ড */
+.dropdown-menu {
+  background-color: #1d5c1b; /* গাঢ় ব্যাকগ্রাউন্ড */
+  border: none; /* চাইলে বর্ডার সরিয়ে দিন */
+}
+
+/* সাব মেনুর লেখা */
+.dropdown-item {
+  color: #ffcc00; /* আপনার পছন্দের টেক্সট কালার */
+}
+
+/* hover এ লেখার রঙ */
+.dropdown-item:hover {
+  background-color: #444; /* hover ব্যাকগ্রাউন্ড */
+  color: #ffffff;         /* hover টেক্সট */
+}
+
+/* pre loader*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #31e0e0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader img {
+  width: 500px;   /* চাইলে % দিতে পারেন: 30%, 50% */
+  height: auto;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #070707;
+    text-shadow: 2px 2px 4px rgba(248, 18, 18, 0.849);
+    z-index: 10; /* সবসময় ছবির উপরে থাকবে */
+}
+
+.carousel-caption h5 {
+    width: fit-content;
+    padding: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 🔹 মোবাইল ও ছোট স্ক্রিনের জন্য */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 60vh; /* মোবাইলে ছবিটা একটু ছোট হবে */
+  }
+
+  .carousel-caption {
+    top: 65%;
+    transform: translate(-50%, -50%);
+    padding: 0 10px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.85);
+    color: #000;
+  }
+}
+
+/* 🔹 অতিক্ষুদ্র স্ক্রিন (যেমন পুরোনো ফোন) */
+@media (max-width: 480px) {
+  .carousel-caption {
+    top: 70%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Image Carousel ends */
+
+/* head teacher and UEO starts */
+.principal-section {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.principal-section h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.principal-section p {
+    color: #5f666d;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.principal-section .principal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* সামান্য রাউন্ড করার জন্য */
+    transition: box-shadow 0.3s ease; /* হোভার ইফেক্টের জন্য */
+}
+
+.principal-section .principal-image:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* হোভার শ্যাডো */
+}
+.principal-section .principal-name {
+    color: #343a40;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.principal-section .principal-designation {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.principal-section .text-muted {
+    font-size: 14px;
+    color: #6c757d; /* তারিখের রং */
+}
+/* head teacher end */
+/* (Home page)ICT Section starts */
+.ict-section {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 20px 0;
+    margin: 4px;
+}
+
+.ict-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.ict-section .btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    border-color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ict-section .btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+}
+/* ICT Section ends */
+
+/* Recent Activities Section */
+.recent-activities-section {
+    background-color: #f8f9fa;
+}
+
+.recent-activities-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.recent-activity-item {
+    margin-bottom: 30px;
+    width: 45%; /* Adjust as needed */
+}
+
+.recent-activity-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.recent-activity-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.recent-activity-image:hover img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust transparency as needed */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.recent-activity-image:hover .image-overlay {
+    opacity: 1;
+}
+
+.recent-activity-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.activity-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.activity-description {
+    font-size: 1rem;
+    color: #343a40;
+}
+
+/* Responsive for Mobile Screens */
+@media (max-width: 767px) {
+    .recent-activities-wrapper {
+        flex-direction: column;
+    }
+
+    .recent-activity-item {
+        width: 100%;
+    }
+}
+/* Recent Activities Section ends */
+/* About page starts */
+.about-section {
+    margin-top: 20px;
+    margin-left: 4px;
+    background-color: #97c5f3;
+}
+
+.about-section .section-title {
+    font-size: 2.5rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-section .history-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .history-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5c6369;
+}
+
+.about-section .history-content .btn-primary {
+    background-color: #007bff;
+    border-color: #036ddd;
+    transition: background-color 0.3s ease;
+}
+
+.about-section .history-content .btn-primary:hover {
+    background-color: #012f5e;
+    border-color: #0056b3;
+}
+
+/* Land Donors Section Styles */
+.land-donors-section {
+    background-color: #f8cbf6;
+    margin: 4px;
+}
+
+.land-donors-section .section-title {
+    font-size: 2rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.land-donors-section .img-fluid {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.land-donors-section .donor-name {
+    font-size: 1.2rem;
+    color: #343a40;
+    text-align: center;
+}
+
+.land-donors-section .donor-address {
+    font-size: 1rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Land Donation Table Section  */
+.land-donation-table-section {
+    background-color: #fff;
+
+}
+
+.land-donation-table-section .section-title {
+    font-size: 2rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.land-donation-table-section .table-responsive {
+    overflow-x: auto;
+}
+
+.land-donation-table-section .table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.land-donation-table-section .table-bordered th,
+.land-donation-table-section .table-bordered td {
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.land-donation-table-section .table-head th{
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+
+}
+
+.land-donation-table-section .table-head th {
+    font-weight: normal;
+}
+
+/* Founding Members Group Photo Section Styles */
+.founding-members-section {
+    background-color: #ecfceb;
+}
+
+.founding-members-section .section-title {
+    font-size: 2rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.founding-members-section .img-fluid {
+    border-radius: 10px;
+}
+
+/* Founding Members Table Section  */
+.founding-members-table-section {
+    background-color: #f0f5f4;
+}
+
+.founding-members-table-section .section-title {
+    font-size: 2rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.founding-members-table-section .table-responsive {
+    overflow-x: auto;
+}
+
+.founding-members-table-section .table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.founding-members-table-section .table-bordered th{
+    background-color: #007bff;
+    text-align: center;
+    color: #fff; /* Added text color for better visibility */
+}
+
+.founding-members-table-section .table-bordered td {
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.founding-members-table-section .table-head {
+    background-color: #007bff;
+    color: #fff;
+    
+}
+
+.founding-members-table-section .table-head th {
+    font-weight: 600; /* Corrected font-weight */
+}
+
+/* Even and Odd row colors */
+.founding-members-table-section .table-bordered tbody tr:nth-child(even) {
+    background-color: #76f55c; /* Light grey for even rows */
+}
+
+.founding-members-table-section .table-bordered tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+/* Journey Section Styles */
+.journey-section {
+    background-color: #f8f9fa; /* হালকা ব্যাকগ্রাউন্ড কালার */
+    padding: 30px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.image-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* ছবির চারদিকে বর্ডার */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.image-info {
+    margin-top: 10px;
+}
+
+.image-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.image-description {
+    font-size: 1rem;
+    color: #333;
+}
+
+.img-fluid {
+    width: 100%; /* ছবি পুরো কন্টেইনার জুড়ে দেখানোর জন্য */
+    height: auto; /* উচ্চতা অটোমেটিকভাবে ঠিক করার জন্য */
+    display: block; /* মার্জিন সমস্যার সমাধান করে */
+}
+
+.rounded {
+    border-radius: 8px; /* ছবির কোণা হালকা গোল করার জন্য */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .image-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Fun Facts Section Styles */
+.fun-facts-section {
+    background-color: #d7e5f3; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+    padding: 60px 0;
+    margin: 4px 0;
+
+}
+
+/* Section Title */
+.fun-facts-section .section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 40px;
+}
+
+/* Fun Fact Card */
+.fun-facts-section .fun-fact {
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* সমান উচ্চতা */
+}
+
+/* Hover effect */
+.fun-facts-section .fun-fact:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Number Style */
+.fun-facts-section .fact-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Title Style */
+.fun-facts-section .fact-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+/* Responsive Padding for Container */
+
+
+@media (min-width: 768px) {
+    .fun-facts-section {
+        padding: 80px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fun-facts-section {
+        padding: 100px 0;
+    }
+}
+
+/* About page ends */
+/*teachers page starts */
+
+.teachers-section {
+    background-color: #027402; /* হালকা ব্যাকগ্রাউন্ড কালার */
+    margin: 4px;
+    padding: 30px 0;
+}
+.teachers-section h2{
+    color: white;
+   
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f8f4f4;
+}
+
+.section-description {
+    font-size: 1rem;
+    color: #f1efef;
+    margin-bottom: 30px;
+}
+
+.teacher-item {
+    margin-bottom: 30px;
+}
+
+.teacher-image {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* হালকা শ্যাডো */
+    transition: box-shadow 0.3s ease; /* স্মুথ ট্রানজিশন */
+}
+
+.teacher-image:hover {
+    box-shadow: 0 8px 16px rgb(252, 249, 249); /* হোভারে আরও গাঢ় শ্যাডো */
+}
+
+.teacher-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* স্মুথ ট্রানজিশন */
+}
+
+.teacher-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.teacher-name {
+    font-size: 1.2rem;
+    color: #f7f2f2;
+    margin-bottom: 5px;
+  
+}
+
+.teacher-designation {
+    font-size: 1rem;
+    color: #faac05;
+   
+}
+
+/* মোবাইল স্ক্রিনের জন্য */
+@media (max-width: 767px) {
+    .teacher-item {
+        width: 50%; /* দুইটি করে ছবি দেখানোর জন্য */
+        float: left; /* পাশাপাশি দেখানোর জন্য */
+    }
+}
+/*teachers page ends */
+
+/*teacher-single page starts */
+
+.page-title-section {
+  padding: 20px 0;
+  margin: 3px;
+  text-align: center;
+  color: white;
+}
+.section{
+    background-color: rgb(155, 154, 151);
+    margin: 3px;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for darkness */
+}
+
+.page-title-section .container {
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+.custom-breadcrumb .list-inline-item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.text-lighten {
+  color: #ffffff !important;
+}
+
+.section {
+  padding: 60px 0;
+}
+.label-color {
+        color: #f2f5f2; 
+    }
+
+.text-color {
+  color: #fad506;
+  text-decoration: none;
+   
+}
+
+.custom-list {
+    list-style-type: square; /* অথবা circle, square ইত্যাদি */
+    padding-left: 20px; /* বুলেট পয়েন্ট এবং লেখার মধ্যে দূরত্ব তৈরি করার জন্য */
+}
+
+/*teacher-single page ends */
+/* files page starts*/
+.school-info {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 20px 0; /* টপ এবং বটমে প্যাডিং যোগ করে */
+  background-color: #dedfe0; /* হালকা ধূসর ব্যাকগ্রাউন্ড (ঐচ্ছিক) */
+}
+
+.school-info .container {
+  max-width: 1200px; /* কন্টেইনারের সর্বোচ্চ প্রস্থ সেট করে */
+  margin: 0 auto; /* কন্টেইনারকে অনুভূমিকভাবে সেন্টারে আনে */
+  padding: 0 15px; /* কন্টেইনারের দুইপাশে সামান্য প্যাডিং দেয় */
+}
+
+.school-info .row {
+  display: flex; 
+  flex-wrap: wrap; /* ছোট স্ক্রিনে এলিমেন্টগুলোকে র‍্যাপ করার অনুমতি দেয় */
+  margin: 0 -15px; 
+}
+
+.school-info .col-lg-3,
+.school-info .col-md-6 {
+  padding: 0 15px; /* কলামের দুইপাশে প্যাডিং যোগ করে */
+  margin-bottom: 20px; /* প্রতিটি কার্ডের নিচে মার্জিন দেয় */
+  width: 100%; /* মোবাইল ডিভাইসের জন্য ফুল উইথ করে */
+}
+
+/* লার্জ ডিভাইসের জন্য কলামের প্রস্থ */
+@media (min-width: 992px) {
+  .school-info .col-lg-3 {
+    width: 25%; /* লার্জ স্ক্রিনে প্রতিটি কলাম ২৫% জায়গা দখল করে */
+  }
+}
+
+/* মিডিয়াম ডিভাইসের জন্য কলামের প্রস্থ */
+@media (min-width: 768px) and (max-width: 991px) {
+  .school-info .col-md-6 {
+    width: 50%; /* মিডিয়াম স্ক্রিনে প্রতিটি কলাম ৫০% জায়গা দখল করে */
+  }
+}
+
+.school-info .info-card {
+  border: 1px solid #dee2e6; /* কার্ডের বর্ডার যোগ করে */
+  border-radius: 10px; /* কার্ডের কোণাগুলোকে হালকা গোলাকার করে */
+  box-shadow: 0 0.125rem 0.25rem rgba(240, 60, 60, 0.075); /* হালকা শ্যাডো যোগ করে */
+  transition: all 0.3s ease-in-out; /* স্মুথ ট্রানজিশন ইফেক্ট */
+  height: 100%; /* কার্ডগুলোকে সমান উচ্চতার করে */
+  
+}
+
+.school-info .info-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(32, 32, 32, 0.15); /* হোভারে শ্যাডো আরও গাঢ় হয় */
+}
+
+
+.school-info .info-card .card-body {
+  padding: 1.25rem; /* কার্ড বডির ভিতরে প্যাডিং যোগ করে */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.school-info .info-card .card-title {
+  font-size: 1.25rem; /* কার্ড টাইটেলের ফন্ট সাইজ */
+  margin-bottom: 0.75rem; /* টাইটেলের নিচে মার্জিন দেয় */
+  color: #0b90dd; /* টাইটেলের রং */
+  font-weight: 500; /* ফন্ট ওয়েট */
+}
+
+.school-info .info-card .card-text {
+  font-size: 1rem; /* কার্ড টেক্সটের ফন্ট সাইজ */
+  color: #3c4247; /* টেক্সটের রং */
+}
+.catchment-area-children{
+    background-color: rgb(250, 239, 227);
+}
+.catchment-area-children h2{
+    color: #003974;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-style: bold;
+}
+
+.table-container { 
+  width: 100%;
+  overflow-x: auto; /* টেবিল যদি স্ক্রিনের চেয়ে বড় হয়, তাহলে স্ক্রলবার দেখাবে */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #b4b3b3;
+  padding: 8px;
+  text-align: center;
+}
+
+thead tr:first-child th {
+  background-color: #88b3f3;
+   color: rgb(24, 2, 2);
+}
+
+/* "এই বিদ্যালয়ে অধ্যয়নরত শিক্ষার্থী" টেবিলের জন্য */
+#student-table-section .current-student-table-container h2 {
+    color: #003974;
+    padding-left: 20px;
+    padding-bottom: 6px;
+}
+
+.current-student-table-container {
+  margin-top: 35px;
+  padding: 10px;  
+  width: 100%;
+  overflow-x: auto;
+}
+
+.current-student-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.current-student-table-container th,
+.current-student-table-container td {
+  border: 1px solid #686363;
+  padding: 8px;
+  text-align: center;
+}
+
+.current-student-table-container th {
+  background-color: #88b3f3;
+  font-weight: bold;
+}
+
+/* টেবিল হেডের কলামগুলিতে ভিন্ন রং যোগ করা হলো */
+.current-student-table-container thead tr th:nth-child(1) {
+  background-color: #e6f7ff; /* হালকা নীল */
+}
+.current-student-table-container thead tr th:nth-child(2),
+.current-student-table-container thead tr th:nth-child(3),
+.current-student-table-container thead tr th:nth-child(4) {
+  background-color: #88b3f3; /* হালকা সবুজ */
+}
+.current-student-table-container thead tr th:nth-child(5),
+.current-student-table-container thead tr th:nth-child(6),
+.current-student-table-container thead tr th:nth-child(7) {
+  background-color: #fccfcf; /* হালকা লাল */
+}
+.current-student-table-container thead tr th:nth-child(8),
+.current-student-table-container thead tr th:nth-child(9),
+.current-student-table-container thead tr th:nth-child(10) {
+  background-color: #fcfc9f; /* হালকা হলুদ */
+}
+/* CL Reg Starts*/
+#cl-register {
+    width: 95%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.table-responsive-container {
+    overflow-x: auto;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.custom-table thead th {
+    background-color: #f5f5f5;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e9e9e9;
+    transition: background-color 0.3s ease;
+}
+
+.custom-table .teacher-name {
+    text-align: left;
+}
+
+.month-header th {
+    padding: 8px;
+    font-size: 12px;
+}
+
+.last-update {
+    text-align: right;
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.last-update span {
+    border-bottom: 1px dashed #999;
+    cursor: text;
+}
+/* CL Reg ends*/
+
+/*stock register (ICT)*/
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+/* Rutin, Catchment*/
+#image-section {
+    display: flex;
+    flex-direction: column; /* ছবিগুলো উপরে নিচে দেখানোর জন্য */
+    align-items: center; /* ছবিগুলো horizontally center করার জন্য */
+    margin-top: 20px; /* টেবিল থেকে একটু দূরত্ব তৈরি করার জন্য */
+}
+
+.image-container {
+    margin-bottom: 20px; /* প্রতিটি ছবির মাঝে দূরত্ব তৈরি করার জন্য */
+    text-align: center; /* ক্যাপশন টেক্সট center করার জন্য */
+}
+
+.image-container img {
+    max-width: 100%; /* ছবি বড় স্ক্রিনে তার কন্টেইনারের চেয়ে বড় হবে না */
+    height: auto; /* ছবিটির aspect ratio ঠিক রাখবে */
+    display: block; /* ছবির নিচে extra space দূর করার জন্য */
+}
+
+.image-caption {
+    font-style: italic; /* ক্যাপশনটিকে ইটালিক করার জন্য */
+    color: #777; /* ক্যাপশনটিকে একটু হালকা করার জন্য */
+}
+/* SMC, PTA Section Starts */
+.members-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #004d66;
+}
+
+/* Member Card */
+.member-card {
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.member-card h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.member-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* files ends*/
+
+/* Student page starts */
+.stu-section {
+  background: #036d0c;
+  margin:4px;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  
+}
+
+.student-section-header h2{
+    color: #fff;
+}
+.section-subtitle{
+    color: white;
+}
+
+.stu-class-title {
+  font-size: 1.5rem;
+  margin: 20px 0 15px;
+  color: #faf6f6;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.stu-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stu-thumb {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.stu-thumb:hover {
+  transform: scale(1.05);
+}
+
+.stu-name {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #e4d508;
+}
+
+/* Modal */
+.stu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+    padding-top: 70px; /* ছোট স্ক্রিনে স্ক্রল */
+}
+
+.stu-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding-left: 10px; 
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid #2e2e2e;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2),
+                0 6px 20px rgba(0,0,0,0.19);
+    animation: animatetop 0.4s;
+}
+
+/* Animation */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to   {top:0; opacity:1}
+}
+
+/* Close button */
+.stu-close {
+    color: #7e7d7d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.stu-close:hover,
+.stu-close:focus {
+    color: #f50404;
+    cursor: pointer;
+}
+
+/* Photo */
+.stu-modal-photo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Info */
+.stu-modal-info {
+    padding: 20px;
+}
+.stu-modal-info p {
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* Performance box common style */
+/* Performance wrapper - সব বক্স পারফরম্যান্সের নিচে এক সারিতে */
+#stu-modal-performance-arrow {
+  display: flex;
+  flex-wrap: nowrap; /* এক লাইনে থাকবে */
+  gap: 10px;          /* বক্সের মধ্যে ফাঁকা */
+  margin-top: 4px;   /* "পারফরম্যান্স" থেকে ফাঁকা */
+}
+
+/* বক্স স্টাইল */
+.perf-box {
+  width: 18px;
+  height: 20px;
+  border-radius: 3px; /* চাইলে গোল করা যায় */
+}
+
+.perf-good   { background-color: #28a745; } /* সবুজ */
+.perf-medium { background-color: #fcb902; } /* হলুদ */
+.perf-bad    { background-color: #dc3545; } /* লাল */
+
+/* Larger screens */
+@media (min-width: 768px) {
+    .stu-modal-content {
+        max-width: 50%;
+        margin-top: 5%;
+    }
+    .stu-modal-photo {
+        padding-right: 20px;
+    }
+    .stu-modal-info {
+        padding-left: 20px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    .stu-modal-photo img {
+        max-width: 50%;
+    }
+     .stu-modal {
+        padding-top: 90px; /* কার্ডের উপর নিয়ন্ত্রণ */
+    }
+     .stu-modal-content {
+        transform: scale(0.9);   /* পুরো কার্ড 90% আকারে */
+        transform-origin: top center; /* উপরের দিক থেকে ছোট হবে */
+    }
+}
+/*Student page ends*/
+
+/*gallary page starts here*/
+.gallery-section {
+  padding-top: 100px; /* header space */
+  background-color: #215c21;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  color: white;
+  width: 100%;      /* পুরো স্ক্রিন জুড়ে */
+  margin: 4px;        /* দুই পাশের ফাঁকা কেটে দেবে */
+}
+
+.gallery-section h2,
+.gallery-section p {
+  text-align: center;
+}
+
+.gallery-section p {
+  background-color: #f7f6f4;
+  padding: 6px 10px;
+  display: inline-block;      /* শুধু টেক্সটের চারপাশে ব্যাকগ্রাউন্ড */
+  border-radius: 4px;
+  color: #333;
+}
+
+/* Gallery */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover { transform: scale(1.05); }
+.gallery-item img { 
+  width: 100%; 
+  border-radius: 10px; 
+  border: 2px solid white;
+}
+.gallery-caption {
+  position: absolute;
+  bottom: 0; left: 0; width: 100%;
+  padding: 6px;
+  background: rgba(0,0,0,0.6);
+  color: #fff; 
+  font-size: 14px; 
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+  text-align: center;
+}
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+.close {
+  position: absolute; top: 20px; right: 35px;
+  color: #fff; font-size: 40px; font-weight: bold;
+  cursor: pointer;
+}
+.close:hover { color: #ff4444; }
+
+/*gallery page ends here*/
+
+
+/* (গ্রাফ) progress report starts here*/
+/*body {
+  font-family: "Noto Sans Bengali", sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+}*/
+
+/* (গ্রাফ) progress report ends here*/
+
+/*Article page starts here*/
+
+/* ======যোগাযোগ ফর্ম সেকশন ====== */
+.contact-form-section {
+    font-family: "SolaimanLipi", Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-form-section form {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form-section label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+.contact-form-section input,
+.contact-form-section textarea,
+.contact-form-section button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form-section button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form-section button:hover {
+    background-color: #0056b3;
+}
+
+
+/* ====== মনের কথা সেকশন ====== */
+.blog-section {
+    font-family: "SolaimanLipi", Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 40px 20px;
+}
+
+.blog-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.blog-section .blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.blog-section .blog-post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-section .blog-post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.blog-section .blog-post h2 {
+    margin-top: 0;
+    color: #0077cc;
+}
+
+.blog-section .blog-post .meta {
+    font-size: 14px;
+    color: #444;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blog-section .blog-post .meta img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.blog-section .blog-post p {
+    line-height: 1.6;
+    color: #333;
+}
+
+.blog-section .blog-post .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.blog-section .blog-post .read-more:hover {
+    color: #005599;
+}
+
+ /*Research Section starts*/
+
+.article-title h1 {
+      background-color: #e0dee0;
+      padding: 5px;
+      margin: 4px;
+      text-align: center;
+      margin-bottom: 1px;
+    }
+    .article-title p{
+      background-color: #e0dee0;
+      padding: 10px;
+      margin-left: 4px;
+      margin-right: 4px;
+      text-align: center;
+      margin-bottom: 30px;
+    } 
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+      
+    }
+    .blog-post {
+      background: #cecccc;
+      padding: 20px;
+      margin: 4px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .blog-post:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .blog-post h2 {
+      margin-top: 0;
+      color: #0077cc;
+    }
+    .meta {
+      font-size: 14px;
+      color: #444;
+      margin: 10px ;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .meta img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+    .blog-post p {
+      line-height: 1.6;
+      color: #333;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer; /* Add cursor style to indicate it's clickable */
+      padding: 8px 12px; /* Add some padding for better appearance */
+      border: 1px solid #0077cc; /* Add a border */
+      border-radius: 5px; /* Add some rounded corners */
+      background-color: #fff; /* Set a background color */
+    }
+    .read-more:hover {
+      color: #005599;
+      background-color: #e9e7e7; /* Change background color on hover */
+      border-color: #005599; /* Change border color on hover */
+    }
+    .article-container {
+      display: none;
+      position: fixed;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      overflow: auto;
+    }
+
+    .article-content {
+      background-color: white ;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 30px; /* Increase the font size */
+  cursor: pointer;
+  z-index: 1002;
+  color: #08c428; /* Change the color */
+  background-color: #f0f0f0; /* Add a background color */
+  border-radius: 10%; /* Make it circular */
+  width: 30px; /* Set a width */
+  height: 30px; /* Set a height */
+  text-align: center; /* Center the 'X' */
+  line-height: 20px; /* Vertically center the 'X' */
+  border: 2px solid #ccc; /* Add a border */
+}
+
+.close-button:hover {
+  color: #fa0404; /* Change color on hover */
+  background-color: #e0e0e0; /* Change background color on hover */
+  border-color: #999; /* Change border color on hover */
+}
+
+    /* Specific styles for each article container */
+    #article-container-1 .article-content { /* Style for article 1 */ }
+    #article-container-2 .article-content { /* Style for article 2 */ }
+    #article-container-3 .article-content { /* Style for article 3 */ }
+
+    /* Specific styles for each close button */
+    #article-container-1 .close-button { /* Style for close button in article 1 */ }
+    #article-container-2 .close-button { /* Style for close button in article 2 */ }
+    #article-container-3 .close-button { /* Style for close button in article 3 */ }
+    /*research section ends*/
+
+/*Notice page starts*/
+.notice-container {
+            margin-top: 100px; /* Adjust as needed */
+            padding: 20px;
+        }
+
+        .notice-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .notice-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .notice-date {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .notice-description {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+
+/* Footer Starts */
+.footer {
+    background-color: #194b19;
+    margin: 4px 4px;
+}
+
+.footer h5 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #ffd904;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer ul li a {
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f8f8f4;
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.849);
+}
+/* Footer ends */

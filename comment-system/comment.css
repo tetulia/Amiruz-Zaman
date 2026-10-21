@@ -1,0 +1,30 @@
+
+body {
+   background: #d9f0fc; 
+   margin-top: 16px;
+   font-family: "Noto Sans Bengali", sans-serif;
+   
+  }
+
+ 
+.comment-page-title h2{
+  background-color:white;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.comment-box { background: #fff; padding: 15px; border-radius: 10px; margin-bottom: 15px;
+ }
+.reply-box { margin-left: 30px; background: rgb(210, 217, 247); padding: 10px; border-left: 3px solid #007bff; margin-top:10px; 
+}
+.admin-controls { margin-top: 10px; }
+
+.comment-box {
+  border-left: 4px solid #007bff;
+  
+}
+
